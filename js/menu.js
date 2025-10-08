@@ -3,7 +3,9 @@ class Menu {
         this.target = document.querySelector(target);
         this.target2 = document.querySelector('.a-header-nav-item__link.fixed');
         this.menu = document.querySelector('.o-menu');
-        
+        this.burgerMenu = document.querySelector('.m-header-nav-burger__icon');
+        this.burgerMenuScrolled = document.querySelector('.m-header-nav-burger__icon-scrolled');
+        this.burgerMenuClose = document.querySelector('.a-menu-close');
 
         this.hideTimeout = null;
         this.currentMode = 'normal';
@@ -34,6 +36,18 @@ class Menu {
 
         this.menu.addEventListener('mouseenter', this.handleMenuEnter.bind(this));
         this.menu.addEventListener('mouseleave', this.handleMenuLeave.bind(this));
+
+
+        this.burgerMenu.addEventListener('click', this.handlePhoneEnter.bind(this));
+
+
+        if (this.burgerMenuScrolled) {
+            this.burgerMenuScrolled.addEventListener('click', this.handlePhoneEnter.bind(this));
+        }
+
+        if (this.burgerMenuClose) {
+            this.burgerMenuClose.addEventListener('click', this.hideMenuPhone.bind(this));
+        }
     }
 
     handleNormalEnter() {
@@ -46,6 +60,12 @@ class Menu {
         this.cancelHideTimer();
         this.currentMode = 'fixed';
         this.showMenuFixed();
+    }
+
+    handlePhoneEnter() {
+        this.cancelHideTimer();
+        this.currentMode = 'phone';
+        this.showMenuPhone();
     }
 
     handleMenuEnter() {
@@ -65,6 +85,10 @@ class Menu {
         this.delayHide();
     }
 
+    handlePhoneLeave() {
+        this.delayHide();
+    }
+
     handleMenuLeave() {
         this.delayHide();
     }
@@ -81,9 +105,21 @@ class Menu {
         console.log("Menu shown from fixed");
     }
 
+    showMenuPhone() {
+        this.menu.classList.add('active');
+        this.menu.classList.add('phone');
+        console.log("Menu shown from phone");
+    }
+
     hideMenu() {
         this.menu.classList.remove('active');
         this.menu.classList.remove('fixed-position');
+        console.log("Menu hidden");
+    }
+
+    hideMenuPhone() {
+        this.menu.classList.remove('active');
+        this.menu.classList.remove('phone');
         console.log("Menu hidden");
     }
 

@@ -741,6 +741,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 96.278%;
   letter-spacing: 4.25px;
+  text-transform: uppercase;
 }
 
 .a-publi-title::before {
@@ -1508,6 +1509,10 @@ color: var(--bleuFonce);
   left: auto;
   z-index: 9999;
   transition: all 0.3s ease;
+}
+
+.a-menu-close {
+  display: none;
 }
 
 .o-menu.active {
