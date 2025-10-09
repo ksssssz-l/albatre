@@ -107,11 +107,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 13px;
   }
 
-  .o-slider::after {
+  /* .o-slider::after {
     left: 39%;
     width: 779px;
     height: 225px;
-  }
+  } */
 
   .a-oneclick-list__link {
     font-size: 13px;
@@ -156,11 +156,12 @@ h1, h2, h3, h4, h5, h6 {
   .a-oneclick-list {
     align-items: flex-start;
     padding: 0;
+    gap: calc(var(--space) * 8);
   }
 
   .m-oneclick-container {
-    width: 80vw;
-    height: 13vw;
+    /* width: 80vw; */
+    height: 100%;
   }
 
   .a-oneclick-list-item {
@@ -241,9 +242,9 @@ h1, h2, h3, h4, h5, h6 {
 
   }
 
-  .o-slider::after {
+  /* .o-slider::after {
     background-size: 600px;
-  }
+  } */
 
 
   .a-header-nav__logo.fixed {
@@ -305,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .a-gtn-content__title {
-    font-size: 55px;
+    font-size: 75px;
   }
 
   .m-gtn-container {
@@ -317,7 +318,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .o-gtn::after {
-    left: 95%;
+    display: none;
   }
 
   .a-gtn-end-card__text {
@@ -357,10 +358,10 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
   }
 
-  .o-slider::after {
+  /* .o-slider::after {
     background-size: 300px;
     left: 31%;
-  }
+  } */
 
   .o-oneclick {
     display: flex;
@@ -407,6 +408,7 @@ h1, h2, h3, h4, h5, h6 {
   
   .m-oneclick-container-item {
     gap: calc(var(--space) * 1);
+    padding: 0;
   }
 
   .slider-dots {
@@ -437,6 +439,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 75px;
   }
 
+  .o-publi::after {
+    display: none;
+  }
+
   .m-publications-slider__track {
     padding: 0;
   }
@@ -458,8 +464,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .m-publi-container-slider {
-    padding-left: calc(var(--space) * 10);
-    margin-top: calc(var(--space) * 60);
+    margin-top: calc(var(--space) * 20);
   }
 
   .m-publi-container {
@@ -472,6 +477,17 @@ h1, h2, h3, h4, h5, h6 {
 
   .m-gtn-container {
     gap: calc(var(--space) * 6);
+    flex-direction: column;
+  }
+
+  .a-gtn-content__text {
+    width: 100%;
+    font-size: 20px;
+    padding: calc(var(--space) * 6) calc(var(--space) * 2);
+  }
+
+  .a-gtn-content__link {
+    font-size: 20px;
   }
 
   .o-gtn::after {
@@ -538,6 +554,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
     line-height: 90.778%;
   }
+
+  .flex {
+    gap: 0;
+  }
 }
 
 
@@ -550,6 +570,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 40vw;
     height: auto;
     padding: 0;
+  }
+
+  .o-oneclick {
+    height: 75vw;
   }
 
   .a-oneclick-list {
@@ -565,11 +589,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .o-slider {
     height: 55vw;
-  }
-
-  .m-oneclick-container {
-    height: 70vw;
-    width: 85vw;
   }
 
   .a-oneclick-list__link.first::before {
@@ -677,7 +696,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .a-article-img {
     width: 100%;
-    height: auto;
+    height: 80vw;
   }
 
   .m-article-container-text {
@@ -703,6 +722,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .a-news-link {
     display: none;
+  }
+
+  .m-publi-container-slider {
+    margin-top: calc(var(--space) * 60);
   }
 
   .a-news-link-phone {
@@ -786,8 +809,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .a-publication-card {
-    width: 60vw;
-    height: 80vw;
+    width: 50vw;
+    height: 60vw;
   }
 
   .m-publi-container-slider {
@@ -800,26 +823,25 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .a-publication-card.active {
-    transform: translateX(1%) translateY(-12px) scale(1.05) !important;
+    transform: translateX(8%) translateY(1px) scale(1.05) !important;
   }
 
   .a-publication-card.position-2 {
-    transform: translateX(1%) translateY(-12px) scale(1.05) !important;
+    transform: translateX(8%) translateY(1px) scale(1.05) !important;
   }
 
   .a-publication-card.position-3 {
-    transform: translateX(1%) translateY(-12px) scale(1.05) !important;
+    transform: translateX(8%) translateY(1px) scale(1.05) !important;
   }
 
   .a-publication-card.position-4 {
-    transform: translateX(1%) translateY(-12px) scale(1.05) !important;
+    transform: translateX(8%) translateY(1px) scale(1.05) !important;
   }
 
 
   .a-publication-card.position-1 {
     left: 21%;
   }
-
 
   .a-publication-card.position-2 {
     left: 21%;
@@ -926,6 +948,12 @@ h1, h2, h3, h4, h5, h6 {
   .m-gtn-end {
     flex-direction: column;
     gap: calc(var(--space) * 10);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .m-publication-controls {
+    padding-top: calc(var(--space) * 10);
   }
 
   .m-gtn-end-card.second {
@@ -1095,7 +1123,4 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: space-between;
   }
-  
-
-
 }
